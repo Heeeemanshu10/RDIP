@@ -1,0 +1,32 @@
+<!Doctype html>
+<html lang="en">
+    <head><title>Details</title></head>
+    <a href="https://www.iiit.ac.in/"><img src="https://www.iiit.ac.in/img/iiit-new.png" height="100px" width="250px"></a>
+<a href="https://serc.iiit.ac.in/rdip" style="color: purple;"><p style="size: 40px; float: right;">RDIP</p></a>
+<p style="background: black; color: white;"><a href="file:///C:/Users/Himanshu%20Bhanpurkar/Desktop/h/Project/Home.html" style="color: white;">Home</a><a href="file:///C:/Users/Himanshu%20Bhanpurkar/Desktop/h/Project/Registration.html" style="color: white;">       Registration</a></p>
+
+<div>
+    First Name: <span id="firstname"></span>
+    E-mail: <span id="Email"></span>
+    Phone no: <span id="Phone"></span>
+    Gender: <span id="gender"></span>
+    College: <span id="college"></span>
+</div>
+<script>
+    //  var GET=[];
+    // window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){GET[name]=value;});
+    // console.log(GET);
+    
+    var data = window.location.href.split("?")[1];
+    data=data.split("&");
+    store={};
+    for(Element of data){ var f = Element.split("="); store[f[0]]=f[1]; }
+    document.getElementById("firstname").innerHTML=store["First_name"];
+    document.getElementById("Email").innerHTML=store["E_mail"];
+    document.getElementById("Phone").innerHTML=store["Phone_no"];
+    document.getElementById("gender").innerHTML=store["gender"];
+    document.getElementbyId("college").innerHTML=store["college"];
+
+
+    </script>    
+</html>
